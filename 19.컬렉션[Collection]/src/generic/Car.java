@@ -20,7 +20,7 @@ public class Car {
 	private String no;	//차량번호
 	private int inTime;	//입차시간
 	private int outTime;//출차시간
-	private int fee;	//주차요금
+	private int fee;	//주차요금이다
 	
 	/*
 	 * 생성자메쏘드[초기화]

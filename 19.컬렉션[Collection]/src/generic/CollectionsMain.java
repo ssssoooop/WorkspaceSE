@@ -18,6 +18,7 @@ public class CollectionsMain {
 		List<String> stringList=Arrays.asList("유재석","조세호","김경호","이효리","유재식");
 		
 		System.out.println("---------sort[Integer]--------");
+		System.out.println("---------sort[Integer]--------");
 		System.out.println(intList);
 		Collections.sort(intList);
 		System.out.println(intList);
