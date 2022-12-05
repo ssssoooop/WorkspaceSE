@@ -25,6 +25,7 @@ public class MathMain {
 		System.out.println(Math.sqrt(4));
 		System.out.println(Math.pow(2, 8));
 		System.out.println("------------Math.random()-----------");
+		System.out.println("------------Math.random()-----------");
 		/*<< public static double random()>>
 		 *  Returns a double value with a positive sign, 
 		 *  greater than or equal to 0.0 and less than 1.0. Returned values
