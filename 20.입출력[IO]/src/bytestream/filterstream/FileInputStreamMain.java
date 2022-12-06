@@ -1,11 +1,12 @@
 package bytestream.filterstream;
 
+import java.io.File;
 import java.io.FileInputStream;
 
 public class FileInputStreamMain {
 
 	public static void main(String[] args) throws Exception{
-		FileInputStream fis=new FileInputStream("fileOut.dat");
+		FileInputStream fis=new FileInputStream(new File("src/bytestream.fileOut.dat"));
 		
 		int readByte = fis.read();
 		System.out.println("1.byte:"+Integer.toBinaryString(readByte));
@@ -24,6 +25,7 @@ public class FileInputStreamMain {
 			}
 			System.out.println(Integer.toBinaryString(readByte));
 		}
+		
 	}
 
 }
