@@ -1,6 +1,7 @@
 package com.itwill05.service.collection.student;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class StudentServiceArrayList {
 
@@ -50,8 +51,18 @@ public class StudentServiceArrayList {
 	 * 2. 전체학생 총점으로 석차계산
 	 */
 	public void calculateRank() {
-
+		int rank=0;
+		for (int i = 0; i < studentList.size(); i++) {
+			for( int j=0; j<studentList.size()-1;j++) {
+				Student tempStudent = studentList.get(i);
+				Student tempStudent1=studentList.get(j);
+				if(tempStudent.getTot() < tempStudent1.getTot()) {
+					studentList.get(j).setRank(studentList.get(j).getRank() + 1);
+				}
+			}
+		} 
 	}
+	
 
 	/*
 	 * 3. 전체학생반환
@@ -63,44 +74,52 @@ public class StudentServiceArrayList {
 	/*
 	 * 4. 번호3번 학생한명 반환  
 	 */
-	public Student findByStudent(int no) {
-		Student findStudent = studentList.get(no);
-		return findStudent;
-	}
+	public Student findByNo(int no) {
+		 Student findStudent = null;
+	        for (Student student : studentList) {
+	            if (student.getNo() == no) {
+	                findStudent = student;
+	            }
+	        }
+	        return findStudent;
+	    }
 
 	/*
 	 * 5. 학점A인 학생들 반환
 	 */
 	public Student findByGrade(char grade) {
-		Student findGrade = studentList.get(grade);
-		return findGrade;
-	}
-
+		 Student findStudent = null;
+	        for (Student student : studentList) {
+	            if (student.getGrade() == grade) {
+	                findStudent = student;
+	            }
+	        }
+	        return findStudent;
+	    }
 	/*
 	 * 6. 이름KIM 학생들 반환
 	 */
 	public ArrayList<Student> findByName(String name) {
 		ArrayList<Student> findName = new ArrayList<Student>();
-		find
-		return findStudents;
-	}
+			for (Student student : studentList) {
+				if(student.getName()==name) {
+					findName.add(student);
+				}
+			}
+			return findName;
+		}
 
 	/*
 	 * 7. 학생총점으로 오름차순정렬(X)
 	 */
-	public void sortByTotAsc() {
-
+	public void sortByNameAsc() {
+		Collections.sort(studentList, new StudentNameAscComparator());
 	}
 
 	/*
 	 8. 학생이름순으로 오름차순정렬(X)
 	 */
-	public void sortByNameAsc() {
-
+	public void sortByTotAsc() {
+		
 	}
-
-	public ArrayList<Student> findByNo(int no) {
-		return studentList;
-	}
-
 }

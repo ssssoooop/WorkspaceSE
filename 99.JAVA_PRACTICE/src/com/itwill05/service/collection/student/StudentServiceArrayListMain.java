@@ -1,3 +1,4 @@
+
 package com.itwill05.service.collection.student;
 
 
@@ -39,14 +40,14 @@ public class StudentServiceArrayListMain {
 		 * 4. 번호3번 학생한명 반환  
 		 */
 		System.out.println("4.번호3번 학생한명 반환  ");
-		Student findStudent=studentServiceArrayList.findByStudent(3);
+		Student findStudent=studentServiceArrayList.findByNo(3);
 		findStudent.print();
 		
 		/*
 		 * 5. 학점A인 학생들 반환
 		 */
 		System.out.println("5. 학점A인 학생들 반환");
-		studentList=studentServiceArrayList.findByGrade('A');
+		Student studentList2=studentServiceArrayList.findByGrade('A');
 		for (Student student : studentList) {
 			student.print();
 		}

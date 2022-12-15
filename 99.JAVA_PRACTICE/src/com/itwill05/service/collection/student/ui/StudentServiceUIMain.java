@@ -53,7 +53,7 @@ public class StudentServiceUIMain {
 				//3. 번호로   검색
 				System.out.print(" >>번호입력: ");
 				int no = scanner.nextInt();
-				Student findStudent = studentService.findByStudent(no);
+				Student findStudent = studentService.findByNo(no);
 				if(findStudent!=null) {
 					Student.headerPrint();
 					findStudent.print();
@@ -65,7 +65,8 @@ public class StudentServiceUIMain {
 				System.out.print(" >>학점입력: ");
 				String gradeStr = scanner.next();
 				char grade = gradeStr.charAt(0);
-				ArrayList<Student> findStudents = studentService.findByGrade(grade);
+				ArrayList<Student> findStudents = new ArrayList<Student>();
+				studentService.findByGrade(grade);
 				Student.headerPrint();
 				for (int i = 0; i < findStudents.size(); i++) {
 					findStudents.get(i).print();;

@@ -3,6 +3,8 @@ package com.itwill06.collection.student;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import com.itwill05.service.collection.student.Student;
+
 public class StudentArrayListMain {
 
 	public static void main(String[] args) {
@@ -23,7 +25,8 @@ public class StudentArrayListMain {
 		 * 0.학생두명추가
 		 */
 		System.out.println("0.학생두명추가");
-		/*
+		
+		/*2
 		 * 1. 전체학생총점,평균,평점계산
 		 */
 		System.out.println("1. 전체학생총점,평균,평점계산");
